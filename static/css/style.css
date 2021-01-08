@@ -752,4 +752,22 @@ table tbody .emptyTable:first-child {
   margin: 2rem 0;
   line-height: 2rem;
 }
+
+@media only screen and (max-width: 768px) {
+  .navigation .nav-buttons a:nth-child(1) {
+    display: none;
+  }
+  .hero-img-wrapper {
+    display: none;
+  }
+  .hero-wrapper .hero .hero-content {
+    text-align: center;
+    padding: 1rem 0;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .hero-wrapper .hero .hero-content h2 {
+    font-size: 2.5rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */
