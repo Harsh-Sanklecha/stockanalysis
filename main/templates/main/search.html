@@ -3,7 +3,7 @@
 {% block title %} Search Stocks {% endblock %}
 {% block content %}
 
-<div class="search-wrapper p-2">
+<div class="search-wrapper p-3 pt-4 pb-4">
     <div class="search-form-wrapper p-2">
          <!-- <form method="POST" class="form-inline">
             <div class="col-auto border-0">
@@ -34,7 +34,7 @@
         {% endif %}
         {% for data in stock_data %}
         <div class="alert alert-success text-center">
-            {{ status }}
+            {{ data.status }}
         </div>
         {% if data.symbol %}
         <table class="table table-bordered text-center">
@@ -52,6 +52,7 @@
                     <th scope="col">TARGET 2</th>
                     <th scope="col">TARGET 3</th>
                     <th scope="col">TARGET 4</th>
+                    <th scope="col">REPORT</th>
                 </tr>
             </thead>
             <tbody>
@@ -68,12 +69,13 @@
                     <td> {{ data.Target2 }}</td>
                     <td> {{ data.Target3 }}</td>
                     <td> {{ data.Target4 }}</td>
+                    <td> <a href="{{ data.report.url }}" class="btn btn-outline-primary rounded">Download</a> </td>
                 </tr>
             </tbody>
         </table>
         {% endif %}
 
-        <h5>Ye Testing Hai : {{ data.status }}</h5>
+        <!-- <h5>Ye Testing Hai : {{ data.status }}</h5> -->
 
         <!-- <a href="{{ data.report.url }}"> Download </a> -->
         {% endfor %}
