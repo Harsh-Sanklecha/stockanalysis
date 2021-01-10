@@ -710,9 +710,6 @@ table{
 
 @media only screen and (max-width: 990px){
 
-    .navigation .nav-logo{
-    }
-
     .navigation .nav-buttons a:nth-child(1){
         display: none;
     }
@@ -727,7 +724,7 @@ table{
 
     .hero-wrapper .hero .hero-content{
         text-align: center;
-        padding: 3rem 0;
+        padding: 4rem 0;
         transform: none;
 
         h2{
@@ -766,7 +763,18 @@ table{
     }
 
     .login-right{
+        min-height: 100vh;
         padding: 2rem 1rem;
+    }
+
+    .scanner-wrapper .scanner-inner{
+        padding: 0 1.75rem;
+        position: static;
+        transform: none;
+    }
+
+    .nav-search{
+        display: none;
     }
 
     .footer-img{
@@ -806,7 +814,7 @@ table{
     }
     
     .hero-wrapper .bar-graph img{
-        width: 150%;
+        width: 200%;
     }
 
     .news-div .news {

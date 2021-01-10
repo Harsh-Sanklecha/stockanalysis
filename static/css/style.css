@@ -765,7 +765,7 @@ table tbody .emptyTable:first-child {
   }
   .hero-wrapper .hero .hero-content {
     text-align: center;
-    padding: 3rem 0;
+    padding: 4rem 0;
     -webkit-transform: none;
             transform: none;
   }
@@ -798,7 +798,17 @@ table tbody .emptyTable:first-child {
     display: none;
   }
   .login-right {
+    min-height: 100vh;
     padding: 2rem 1rem;
+  }
+  .scanner-wrapper .scanner-inner {
+    padding: 0 1.75rem;
+    position: static;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .nav-search {
+    display: none;
   }
   .footer-img {
     display: none;
@@ -837,7 +847,7 @@ table tbody .emptyTable:first-child {
             transform: scale(0.8);
   }
   .hero-wrapper .bar-graph img {
-    width: 150%;
+    width: 200%;
   }
   .news-div .news {
     -webkit-transform: scale(1);
