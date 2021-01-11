@@ -74,7 +74,13 @@
             </div>
          </div>
      </nav>
-
+    <div class="nav-search-mobile row">
+        <form method="POST" class="m-0">
+            {% csrf_token %}
+            <input type="text" name="ticker" placeholder="Enter a Ticker" autofocus required>
+            <button type="submit" class="btn m-0">SEARCH</button>
+        </form>
+    </div>
     {% if user.is_authenticated %}
     <div class="nav-bottom">
         <div class="nav-bottom-inner">

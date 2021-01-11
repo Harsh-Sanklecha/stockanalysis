@@ -97,7 +97,7 @@ def fibonacciUp(price_max, price_min):
     return entryTargets
 
 def Computation():
-    symbols = ['SBIN',
+    symbols = ['ADANIGREEN',
     ]
 
 
@@ -115,6 +115,7 @@ def Computation():
         swing = []
         dateTime = []
         closedPrice = []
+        trend = " "
         
 
         try:
@@ -271,6 +272,7 @@ def Computation():
                     status = "Stop Loss has occured"
                 else:
                     status = "Awaiting Targets"
+                trend = "BUY"
 
             else:
                 if(low <= Target1 and low > Target2):
@@ -285,6 +287,7 @@ def Computation():
                     status = "Stop Loss has occured"
                 else:
                     status = "Awaiting Targets"
+                trend = "SELL"
 
         filename = settings.MEDIA_ROOT+'/'+symbol+'_report.csv'
 
@@ -293,17 +296,19 @@ def Computation():
             data = import_csv(filename)
             last_row = data[-1]
 
+            print(trend)
+
             if(last_row[1] != status):
                 with open(filename, 'a+', newline='') as f:
                     fieldnames = ['Date', 'Close_Price', 'Signal_Date', 'Call',
-                                'Stop_Loss', 'Target_1', 'Target_2', 'Target_3', 'Target_4', 'Status']
+                                'Stop_Loss', 'Target_1', 'Target_2', 'Target_3', 'Target_4', 'Status','Trend']
                     thewriter = csv.DictWriter(f, fieldnames=fieldnames)
 
                     thewriter.writerow(
                         {'Date': curr_date[:10], 'Close_Price': today_closePrice, 'Signal_Date': callTime[:10],
                         'Call': call, 'Stop_Loss': stopLoss, 'Target_1': Target1,
                         'Target_2': Target2, 'Target_3': Target3, 'Target_4': Target4,
-                        'Status': status
+                         'Status': status, 'Trend': trend
                         })
 
             data = endOfDay.objects.get(symbol=symbol)
@@ -361,7 +366,7 @@ def dashboard(request):
             return render(request, 'main/search.html', {'error': "This ticker is not supported"})
 
 
-    # Computation()
+    Computation()
     currDate = endOfDay.objects.filter(pk='SBIN').values('currDate')[0]['currDate']
     stock_data = endOfDay.objects.all().filter(date=currDate)
     context = {

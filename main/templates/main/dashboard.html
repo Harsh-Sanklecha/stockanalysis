@@ -2,13 +2,12 @@
 {% load static %}
 {% block title %} Dashboard {% endblock %}
 {% block content %}
-    
 <div class="scanner-wrapper">
     <div class="scanner-inner">
         <form class="form-inline m-0">
             <div class="col-auto my-1 p-0 border-0">
                 <select class="custom-select mr-sm-2 bg-light" id="inlineFormCustomSelect">
-                    <option selected disabled>SELECT TYPE </option>
+                    <option selected disabled>MARKET TYPE </option>
                     <option value="day">EQUITY</option>
                     <option value="week">EQUITY DERIVATIVES</option>
                     <option value="month">CURRENCY DERIVATIVES</option>
@@ -17,7 +16,7 @@
             </div>
             <div class="col-auto my-1 border-0">
                 <select class="custom-select mr-sm-2 bg-light" id="inlineFormCustomSelect">
-                    <option selected disabled>SELECT TIME FRAME </option>
+                    <option selected disabled>TIME FRAME </option>
                     <optgroup label="HOURS">
                         <option value="day">1 HOUR</option>
                         <option value="week">2 HOURS</option>
@@ -40,6 +39,61 @@
         <div class="row">
             <div class="list-left-wrapper col-12 pl-3 pr-3">
                 <h4>BUY CALLS</h4>
+
+                <!-- Mobile View For Latest Stocks -->
+                <div class="stock-list-wrapper-mobile">
+                    {% if stock_data %}
+                    {% for stocks in stock_data %}
+                    {% if stocks.call > stocks.stopLoss %}
+                    <div class="card">
+                        <div class="card-header d-flex align-items-center accoridon">
+                            <h5> {{ stocks.symbol }} </h5>
+                            <div class="mr-auto"></div>
+                            <i class="fa fa-caret-down mr-3"></i>
+                        </div>
+                        <div class="panel">
+                            <div class="card-body border">
+                                <table class="table table-striped table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Closing Price</th>
+                                            <td>₹ {{ stocks.closePrice }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Buy Above</th>
+                                            <td><strong class="text-success"> ₹ {{ stocks.call }}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Stop Loss</th>
+                                            <td><strong class="text-danger">₹ {{ stocks.stopLoss }}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Target 1</th>
+                                            <td>₹ {{ stocks.Target1 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Target 2</th>
+                                            <td>₹ {{ stocks.Target2 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Target 3</th>
+                                            <td>₹ {{ stocks.Target3 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Target 4</th>
+                                            <td>₹ {{ stocks.Target4 }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                    {% endif %}
+                </div>
+                <!-- Mobile View For Latest Stocks End -->
+
                 <table class="table table-striped bg-light table-small table-bordered text-center">
                     <thead>
                         <tr>
@@ -79,6 +133,62 @@
             </div>
             <div class="list-right-wrapper col-12 pl-3 pr-3">
                 <h4>SELL CALLS</h4>
+
+
+                <!-- Mobile View For Latest Stocks -->
+                <div class="stock-list-wrapper-mobile">
+                    {% if stock_data %}
+                    {% for stocks in stock_data %}
+                    {% if stocks.call < stocks.stopLoss %}
+                    <div class="card">
+                        <div class="card-header d-flex align-items-center accoridon">
+                            <h5> {{ stocks.symbol }} </h5>
+                            <div class="mr-auto"></div>
+                            <i class="fa fa-caret-down mr-3"></i>
+                        </div>
+                        <div class="panel">
+                            <div class="card-body border">
+                                <table class="table table-striped table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Closing Price</th>
+                                            <td>₹ {{ stocks.closePrice }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Buy Above</th>
+                                            <td><strong class="text-success"> ₹ {{ stocks.call }}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Stop Loss</th>
+                                            <td><strong class="text-danger">₹ {{ stocks.stopLoss }}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Target 1</th>
+                                            <td>₹ {{ stocks.Target1 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Target 2</th>
+                                            <td>₹ {{ stocks.Target2 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Target 3</th>
+                                            <td>₹ {{ stocks.Target3 }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Target 4</th>
+                                            <td>₹ {{ stocks.Target4 }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                    {% endif %}
+                </div>
+                <!-- Mobile View For Latest Stocks End -->
+
                 <table class="table table-striped table-small table-bordered text-center">
                     <thead>
                         <tr>
