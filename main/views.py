@@ -97,7 +97,46 @@ def fibonacciUp(price_max, price_min):
     return entryTargets
 
 def Computation():
-    symbols = ['ADANIGREEN',
+    symbols = ['SBIN',
+               'BAJFINANCE',
+               'ULTRACEMCO',
+               'RELIANCE',
+               'MARUTI',
+               'TCS',
+               'PEL',
+               'INFY',
+               'TATASTEEL',
+               'ASIANPAINT',
+               'GAIL',
+               'ADANIPORTS',
+               'BPCL',
+               'SHREECEM',
+               'ICICIBANK',
+               'HDFCBANK',
+               'ONGC',
+               'UPL',
+               'LT',
+               'TATAMOTORS',
+               'KOTAKBANK',
+               'AXISBANK',
+               'DRREDDY',
+               'BHARTIARTL',
+               'NTPC',
+               'ITC',
+               'JSWSTEEL',
+               'COALINDIA',
+               'HDFC',
+               'NMDC',
+               'INDUSINDBK',
+               'HEROMOTOCO',
+               'EICHERMOT',
+               'SUNPHARMA',
+               'WIPRO',
+               'HUL',
+               'M & M',
+               'TECHM',
+               'DIVISLAB',
+               'BAJAJ_AUTO',
     ]
 
 
@@ -296,7 +335,6 @@ def Computation():
             data = import_csv(filename)
             last_row = data[-1]
 
-            print(trend)
 
             if(last_row[1] != status):
                 with open(filename, 'a+', newline='') as f:
@@ -366,7 +404,7 @@ def dashboard(request):
             return render(request, 'main/search.html', {'error': "This ticker is not supported"})
 
 
-    Computation()
+    # Computation()
     currDate = endOfDay.objects.filter(pk='SBIN').values('currDate')[0]['currDate']
     stock_data = endOfDay.objects.all().filter(date=currDate)
     context = {

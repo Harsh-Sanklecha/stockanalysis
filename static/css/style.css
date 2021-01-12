@@ -936,7 +936,7 @@ table tbody .emptyTable:first-child {
 }
 
 @media only screen and (max-width: 768px) {
-  .stock-list-wrapper table {
+  .stock-list-wrapper table, .searched-table {
     display: none;
   }
   .stock-list-wrapper-mobile {

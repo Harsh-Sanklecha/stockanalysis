@@ -36,8 +36,71 @@
         <div class="alert alert-success text-center">
             {{ data.status }}
         </div>
+
+        <!-- Mobile View For Latest Stocks -->
+        <div class="stock-list-wrapper-mobile">
+            {% if data.symbol %}
+             <div class="card">
+                <div class="card-header d-flex align-items-center accoridon">
+                    <h6> {{ data.symbol }} </h6>
+                    <div class="mr-auto"></div>
+                    <i class="fa fa-caret-down mr-3"></i>
+                </div>
+                <div class="panel">
+                    <div class="card-body border">
+                        <table class="table table-striped table-bordered text-center">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Date </th>
+                                    <td>{{ data.date }}</td>
+                                </tr>
+                                {% if data.call > data.stopLoss %}
+                                <tr>
+                                    <th scope="row">Buy Above</th>
+                                    <td><strong class="text-success"> ₹ {{ data.call }} <i class="fas fa-arrow-up"></i> </strong> </strong></td>
+                                </tr>                                
+                                {% else %}
+                                <tr>
+                                    <th scope="row">Sell Below</th>
+                                    <td><strong class="text-success"> ₹ {{ data.call }} <i class="fas fa-arrow-down"></i> </strong> </strong></td>
+                                </tr>
+                                {% endif %}
+                                
+                                <tr>
+                                    <th scope="row">Stop Loss</th>
+                                    <td><strong class="text-danger">₹ {{ data.stopLoss }}</strong></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Target 1</th>
+                                    <td>₹ {{ data.Target1 }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Target 2</th>
+                                    <td>₹ {{ data.Target2 }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Target 3</th>
+                                    <td>₹ {{ data.Target3 }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Target 4</th>
+                                    <td>₹ {{ data.Target4 }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">REPORT</th>
+                                    <td><a href="{{ data.report.url }}" class="btn btn-outline-primary rounded">Download</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        </div>
+        {% endif %}
+        </div>
+        <!-- Mobile View For Latest Stocks End -->
+
         {% if data.symbol %}
-        <table class="table table-bordered text-center">
+        <table class="table table-bordered text-center searched-table">
             <thead>
                 <tr>
                     <th scope="col">SYMBOL</th>
