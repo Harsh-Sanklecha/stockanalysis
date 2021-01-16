@@ -932,6 +932,7 @@ table tbody .emptyTable:first-child {
     display: flex;
   }
   .navbar .navbar-nav a {
+    padding: 0.5rem;
     text-align: right;
   }
   .navbar a {
