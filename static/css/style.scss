@@ -846,6 +846,7 @@ table{
 @media only screen and (max-width: 990px){
 
     .navbar{
+        padding: 1.15rem;
 
         .navbar-nav{
             display: flex;
@@ -1008,7 +1009,6 @@ table{
 }
 @media only screen and (max-width: 564px){
 
-
     .nav-logo{
         transform: translateX(-20px);
 
@@ -1043,14 +1043,18 @@ table{
         transform: none;
     }
 
-    .scanner-wrapper .scanner-inner{
-        position: absolute;
-        width: 100%;
-        left: 50%;
-        transform: translateX(-50%);
+    .scanner-wrapper{
+        display: none;
 
-        select{
-            width: 8rem;
+            .scanner-inner{
+            position: absolute;
+            width: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+
+            select{
+                width: 8rem;
+            }
         }
     }
 
@@ -1070,8 +1074,8 @@ table{
         }
 
         h5{
-            font-size: 1.2rem;
-            line-height: 1.5rem;
+            font-size: 1rem;
+            // line-height: 1.75rem;
         }
     }
     

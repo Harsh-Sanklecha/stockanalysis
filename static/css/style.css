@@ -923,6 +923,9 @@ table tbody .emptyTable:first-child {
 }
 
 @media only screen and (max-width: 990px) {
+  .navbar {
+    padding: 1.15rem;
+  }
   .navbar .navbar-nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1091,6 +1094,9 @@ table tbody .emptyTable:first-child {
     -webkit-transform: none;
             transform: none;
   }
+  .scanner-wrapper {
+    display: none;
+  }
   .scanner-wrapper .scanner-inner {
     position: absolute;
     width: 100%;
@@ -1112,8 +1118,7 @@ table tbody .emptyTable:first-child {
     width: 60%;
   }
   .footer-wrapper .footer h5 {
-    font-size: 1.2rem;
-    line-height: 1.5rem;
+    font-size: 1rem;
   }
   .footer-wrapper .footer img {
     width: 20rem;
