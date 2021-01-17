@@ -3,8 +3,8 @@
     "short_name": "Invest In It",
     "start_url": "/",
     "display": "standalone",
-    "background_color": "#092E4E",
-    "theme_color": "#092E4E",
+    "background_color": "#092B4B",
+    "theme_color": "#092B4B",
     "icons": [
         {
             "src": "../images/logos/72x72.png",
