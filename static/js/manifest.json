@@ -1,7 +1,7 @@
 {
     "name": "Invest In It",
     "short_name": "Invest In It",
-    "start_url": "/index.html",
+    "start_url": "/",
     "display": "standalone",
     "background_color": "#092E4E",
     "theme_color": "#092E4E",
