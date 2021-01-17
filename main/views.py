@@ -391,7 +391,6 @@ def Computation():
 def dashboard(request):
 
     if request.method == 'POST':
-        status = ""
 
         symbol = request.POST.get('ticker').upper()
 
