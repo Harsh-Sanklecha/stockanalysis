@@ -13,7 +13,7 @@ from .models import endOfDay
 
 entryTargets = []
 params = {
-    'access_key': '56f867af559034d445cf6e5447ee0e54'
+    'access_key': 'fce4047d20b3b06c7393ed8093e0574d'
 }
 
 
@@ -169,6 +169,7 @@ def Computation():
                 lowPrice.append(stock_data['low'])
                 closePrice.append(stock_data['close'])
                 dates.append(stock_data['date'])
+                
             curr_date = api_response['data']['eod'][0]['date']
             today_closePrice = api_response['data']['eod'][0]['close']
 
