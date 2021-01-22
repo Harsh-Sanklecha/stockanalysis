@@ -132,8 +132,6 @@ def Computation():
                'EICHERMOT',
                'SUNPHARMA',
                'WIPRO',
-               'HUL',
-               'M & M',
                'TECHM',
                'DIVISLAB',
                'BAJAJ_AUTO',
