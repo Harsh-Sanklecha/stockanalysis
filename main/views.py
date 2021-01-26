@@ -306,7 +306,7 @@ def Computation():
                     status = "Target 3 Reached"
                 elif(high >= Target4):
                     status = "Final Target Reached"
-                elif(low <= stopLoss):
+                elif(high >= call and low <= stopLoss):
                     status = "Stop Loss has occured"
                 else:
                     status = "Awaiting Targets"
@@ -321,7 +321,7 @@ def Computation():
                     status = "Target 3 Reached"
                 elif(low <= Target4):
                     status = "Final Target Reached"
-                elif(high >= stopLoss):
+                elif(low <= call and high >= stopLoss):
                     status = "Stop Loss has occured"
                 else:
                     status = "Awaiting Targets"
@@ -488,7 +488,6 @@ def search(request):
 def reports(request):
 
     if request.method == 'POST':
-        status = ""
 
         symbol = request.POST.get('ticker').upper()
 
@@ -512,14 +511,17 @@ def profile(request):
     if request.POST:
         form = UserProfileUpdate(request.POST, instance=request.user)
         if form.is_valid():
+            form.first_name = request.POST.get('first_name')
+            form.last_name = request.POST.get('last_name')
             form.save()
 
             return redirect('profile')
     else:
         form = UserProfileUpdate(
             initial={
-                "username": request.user.username,
                 "email": request.user.email,
+                "first_name": request.user.first_name,
+                "last_name": request.user.last_name,
             }
         )
 

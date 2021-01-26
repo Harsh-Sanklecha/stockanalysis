@@ -748,7 +748,7 @@ table tbody .emptyTable:first-child {
 }
 
 .scanner-wrapper .scanner-inner select, .scanner-wrapper .scanner-inner button {
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 .scanner-wrapper .scanner-inner button {

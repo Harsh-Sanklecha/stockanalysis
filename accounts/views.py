@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from main.decorators import unauthenticated_user
 from newsapi.newsapi_client import NewsApiClient
-
+from django.core.mail import EmailMessage
 
 @unauthenticated_user
 def index(request):
@@ -40,7 +40,24 @@ def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save(commit=False)
+            email_id = request.POST.get('email')
+            user.is_active = False
+            user.save()
+
+            email_subject = "Confirm your account on InvestInIt"
+            email_body = "TEST"
+
+            email = EmailMessage(
+                email_subject,
+                email_body,
+               'datafeed0@gmail.com',
+               [email_id],
+            )
+            
+            email.send(fail_silently=False)
+            
+
             messages.success(request, 'Account created successfully')
             return redirect('login')
     else:
