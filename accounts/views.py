@@ -77,7 +77,7 @@ def register(request):
             email.send(fail_silently=False)
             
 
-            messages.success(request, 'Account Created Successfully. Please verify your E-Mail')
+            messages.success(request, 'Account Created Successfully.<br> Please verify your E-Mail')
             return redirect('login')
     else:
         form = UserRegisterForm()
