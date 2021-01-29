@@ -68,7 +68,7 @@ def register(request):
 
             email = EmailMessage(
                 email_subject,
-                'Hi '+user.username + ',\n\nThanks for signing up with Heroku! You must follow this link to activate your account: \n'+activate_url 
+                'Hi '+user.username + ',\n\nThanks for signing up with Invest In It! You must follow this link to activate your account: \n'+activate_url 
                 + '\n\nHave fun, and don''t hesitate to contact us with your feedback.\nInvest In It Team \nhttp://www.investinit.ml',
                'datafeed0@gmail.com',
                [email_id],
@@ -77,7 +77,7 @@ def register(request):
             email.send(fail_silently=False)
             
 
-            messages.success(request, 'Account Created Successfully.<br> Please verify your E-Mail')
+            messages.success(request, 'Account created successfully. Please verify your E-Mail')
             return redirect('login')
     else:
         form = UserRegisterForm()

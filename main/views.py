@@ -135,6 +135,7 @@ def Computation():
                'TECHM',
                'DIVISLAB',
                'BAJAJ_AUTO',
+               'NCC',
     ]
 
 
