@@ -8,3 +8,4 @@ Date,Close_Price,Signal_Date,Call,Stop_Loss,Target_1,Target_2,Target_3,Target_4,
 2021-01-11,99.0,2021-01-08,98.9,98.44,99.26,99.52,99.8,100.08,Final Target Reached,BUY
 2021-01-15,100.45,2021-01-15,101.61,103.26,100.59,99.76,98.93,97.76,Awaiting Targets, 
 2021-01-18,97.55,2021-01-15,101.61,103.26,100.59,99.76,98.93,97.76,Final Target Reached,SELL
+2021-02-01,92.0,2021-02-01,90.54,87.23,93.13,94.96,97.03,99.03,Awaiting Targets, 
