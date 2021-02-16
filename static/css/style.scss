@@ -338,6 +338,26 @@ table{
     }
 }
 
+/* Pie Graph */
+.pie-graph-wrapper{
+    background: #F1F5F9;
+    max-width: 100%;
+    overflow: hidden;
+
+    .pie-graph-candle img{
+        width: 100%;
+    }
+
+    .pie-graph{
+        transform: translateY(-25%);
+
+        img{
+            width: 40rem;
+        }
+    }
+
+}
+
 /* Features Section */
 .features-wrapper{
     max-width: 100%;
@@ -975,6 +995,14 @@ table{
 
 @media only screen and (max-width: 768px){
 
+    .pie-graph-wrapper .pie-graph{
+        transform: translateY(-10%);
+
+        img{
+            width: 30rem;
+        }
+    }
+
     .stock-list-wrapper table, .searched-table{
         display: none;
     }
@@ -1025,6 +1053,10 @@ table{
     }
     .hero-wrapper .hero .hero-content {
         padding: 8rem 0;
+    }
+
+    .pie-graph-wrapper .pie-graph img{
+            width: 25rem;
     }
 
     .news-div .news {
@@ -1100,6 +1132,10 @@ table{
         }
     }
 
+    .pie-graph-wrapper .pie-graph img{
+            width: 20rem;
+    }
+
     .scanner-wrapper .scanner-inner{
 
         select{
@@ -1129,6 +1165,10 @@ table{
         input{
             width: 60%;
         }
+    }
+
+    .pie-graph-wrapper .pie-graph img{
+            width: 17rem;
     }
 
     .scanner-wrapper .scanner-inner{
