@@ -101,7 +101,7 @@ class emailVerification(View):
             return redirect('login')
 
         except Exception as ex:
-            pass
+            print(ex)
 
         return redirect('login')
 

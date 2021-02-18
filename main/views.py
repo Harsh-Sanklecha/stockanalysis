@@ -6,8 +6,10 @@ from django.contrib.auth.decorators import login_required
 from django.conf import settings
 from accounts.forms import UserProfileUpdate
 
+import os
 import csv
-import datetime
+from datetime import date 
+from datetime import timedelta
 import requests
 from .models import endOfDay
 
@@ -29,6 +31,36 @@ def import_csv(csvfilename):
                 data.append(columns)
 
     return data
+
+
+def DailyReport():
+    today = date.today()
+    yesterday = today - timedelta(days=2)
+    query_data = endOfDay.objects.filter(date=yesterday)
+    with open("media/dailyReport/"+str(yesterday)+".csv", 'w', newline='') as f:
+        fieldnames = ['Symbol', 'Date', 'Close_Price', 'Signal_Date', 'Call',
+                      'Stop_Loss', 'Target_1', 'Target_2', 'Target_3', 'Target_4', 'Trend', 'Status']
+
+        thewriter = csv.DictWriter(f, fieldnames=fieldnames)
+        thewriter.writeheader()
+
+    for data in query_data:
+        with open("media/dailyReport/"+str(yesterday)+".csv", 'a+', newline='') as f:
+            fieldnames = ['Symbol', 'Date', 'Close_Price', 'Signal_Date', 'Call',
+                          'Stop_Loss', 'Target_1', 'Target_2', 'Target_3', 'Target_4', 'Trend', 'Status']
+
+            thewriter = csv.DictWriter(f, fieldnames=fieldnames)
+            if data.call > data.stopLoss:
+                trend = "BUY"
+            else:
+                trend = "SELL"
+
+            thewriter.writerow(
+                {'Symbol': data.symbol, 'Date': data.currDate, 'Close_Price': data.closePrice, 'Signal_Date': data.date,
+                    'Call': data.call, 'Stop_Loss': data.stopLoss, 'Target_1': data.Target1,
+                    'Target_2': data.Target2, 'Target_3': data.Target3, 'Target_4': data.Target4,
+                    'Trend': trend, 'Status': data. status
+                 })
 
 def isDoji(out):
     wicks = abs(out[1] - out[2])
@@ -404,6 +436,7 @@ def dashboard(request):
 
 
     # Computation()
+    # DailyReport()
     currDate = endOfDay.objects.filter(pk='SBIN').values('currDate')[0]['currDate']
     stock_data = endOfDay.objects.all().filter(date=currDate)
     context = {
@@ -487,6 +520,11 @@ def search(request):
 
 @login_required(login_url='login')
 def reports(request):
+    today = date.today()
+    yesterday = today - timedelta(days=2)
+
+    daily_report =  '../../media/dailyReport/' + str(yesterday) + '.csv'
+    print(daily_report)
 
     if request.method == 'POST':
 
@@ -500,10 +538,14 @@ def reports(request):
         else:
             return render(request, 'main/search.html', {'error': "This ticker is not supported"})
 
-
     stock_data = endOfDay.objects.all()
 
-    return render(request, 'main/reports.html',{'stock_data':stock_data})
+    context = {
+        'stock_data': stock_data,
+        'daily_report': daily_report,
+    }
+
+    return render(request, 'main/reports.html', context)
 
 
 @login_required(login_url='login')
