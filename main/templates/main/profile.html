@@ -16,8 +16,22 @@
                 <legend>PROFILE</legend>
                 {% if messages %}
                 {% for message in messages %}
-                <div class="alert alert-{{ message.tags }} text-center">
+                <div class="alert alert-success text-center">
                     <small>{{ message }}</small>
+                </div>
+                {% endfor %}
+                {% endif %}
+                {% if form.errors %}
+                {% for field in form %}
+                {% for error in field.errors %}
+                <div class="alert alert-danger text-center">
+                    <small>{{ error|escape }}</small>
+                </div>
+                {% endfor %}
+                {% endfor %}
+                {% for error in form.non_field_errors %}
+                <div class="alert alert-danger text-center">
+                    <small>{{ error|escape }}</small>
                 </div>
                 {% endfor %}
                 {% endif %}
@@ -27,7 +41,7 @@
                     {{ field }}
                 </div>
                 {% endfor %}
-                <p>Want to change password? <a href="#"> Click Here</a></p>
+                <p>Want to change password? <a href="{% url 'password_change' %}"> Click Here</a></p>
                 <button type="submit" class="btn submitBtn">Update</button> <br>
             </fieldset>
         </form>

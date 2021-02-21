@@ -1,7 +1,8 @@
 from django.contrib import admin
 from django.urls import path
-from . import views
 from django.contrib.auth import views as auth_views
+from . import views
+from .views import PasswordsChangeView
 
 
 urlpatterns = [
@@ -9,4 +10,5 @@ urlpatterns = [
     path('search/', views.search, name='search'),
     path('reports/', views.reports, name='reports'),
     path('profile/', views.profile, name='profile'),
+    path('password_change/', PasswordsChangeView.as_view(), name='password_change'),
 ]

@@ -1,17 +1,22 @@
 from django.shortcuts import render,redirect
-import pandas as pd
-import numpy as np
 from bfxhfindicators import Stochastic
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
 from accounts.forms import UserProfileUpdate
+from django.contrib.auth.forms import PasswordChangeForm
+from django.contrib.auth.views import PasswordChangeView
+from django.urls import reverse_lazy
+from django.contrib.messages.views import SuccessMessageMixin
 
+from .models import endOfDay
+
+import pandas as pd
+import numpy as np
 import os
 import csv
 from datetime import date 
 from datetime import timedelta
 import requests
-from .models import endOfDay
 
 entryTargets = []
 params = {
@@ -419,6 +424,7 @@ def Computation():
         data.save()
 
 
+
 @login_required(login_url='login')
 def dashboard(request):
 
@@ -524,7 +530,6 @@ def reports(request):
     yesterday = today - timedelta(days=2)
 
     daily_report =  '../../media/dailyReport/' + str(yesterday) + '.csv'
-    print(daily_report)
 
     if request.method == 'POST':
 
@@ -573,3 +578,10 @@ def profile(request):
     }
 
     return render(request, 'main/profile.html', context)
+
+
+class PasswordsChangeView(SuccessMessageMixin,PasswordChangeView):
+    form_class = PasswordChangeForm
+    template_name = "main/password_change.html"
+    success_url = reverse_lazy('profile')
+    success_message = "Your Password was changed successfully"
