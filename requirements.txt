@@ -56,7 +56,6 @@ toml==0.10.1
 tqdm==4.55.0
 tzlocal==2.1
 urllib3==1.25.10
-vim==0.0.1
 wasabi==0.8.0
 whitenoise==5.2.0
 yarl==1.5.1
