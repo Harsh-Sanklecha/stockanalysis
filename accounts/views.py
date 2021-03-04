@@ -42,6 +42,10 @@ def index(request):
 
     return render(request, 'accounts/index.html', context={"mylist": mylist})
 
+@unauthenticated_user
+def contact(request):
+
+    return render(request,'accounts/contact.html')
 
 @unauthenticated_user
 def register(request):
