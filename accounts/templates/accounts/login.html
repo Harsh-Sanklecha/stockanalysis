@@ -27,7 +27,7 @@
                     <input type="text" name="username" placeholder="Username" required>
                     <input type="password" name="password" placeholder="Password" required>
                     <center>
-                        <h6>By login, you acccept these <a href="#">Terms and Conditions.</a> </h6>
+                        <h6>By login, you acccept these <a href="{% url 'terms' %}">Terms and Conditions.</a> </h6>
                         <button type="submit" class="btn submitBtn">LOG IN</button> <br>
                         <a href="{% url 'reset_password' %}">Forgot Password?</a>
                         <hr class="hr-text" data-content="OR">
