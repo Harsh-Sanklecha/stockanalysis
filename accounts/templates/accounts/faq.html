@@ -1,0 +1,173 @@
+{% extends 'accounts/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %} FAQ {% endblock %}
+{% block content %}
+
+<div class="terms-wrapper p-5">
+
+    <h2>FAQ</h2>
+
+    <div class="faq py-3">
+        <div class="card">
+            <div class="card-header d-flex align-items-center accoridon">
+                <h6> #1: What is stock market? </h6>
+                <div class="mr-auto"></div>
+                <i class="fa fa-caret-down mr-3"></i>
+            </div>
+            <div class="panel">
+                <div class="card-body border">
+                    <p>
+                        A stock market (also called as share market) is the aggregation of buyers and sellers, where seller can sell their
+                        shares or stock and buyer can buy it. Or in other words, we can say that it is a market place where shares of pubic
+                        listed companies are traded.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header d-flex align-items-center accoridon">
+                <h6> #2: What is a stock exchange? </h6>
+                <div class="mr-auto"></div>
+                <i class="fa fa-caret-down mr-3"></i>
+            </div>
+            <div class="panel">
+                <div class="card-body border">
+                    <p>
+                        Stock exchange is a body which act as a mediator and facilitates buying and selling of shares for execution of their
+                        respective orders. Some of the well known exchanges are BSE, NSE, NYSE, NASDAQ etc. For trading any stocks on exchange
+                        the company must first get listed on that exchange.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header d-flex align-items-center accoridon">
+                <h6> #3: What is a share? </h6>
+                <div class="mr-auto"></div>
+                <i class="fa fa-caret-down mr-3"></i>
+            </div>
+            <div class="panel">
+                <div class="card-body border">
+                    <p>
+                        Shares are the smallest unit of ownership in any enterprise that provides proportional distribution of any profit (if
+                        declared) in the form of Dividend. The two main types of shares are common shares and preferred shares. Preferred
+                        shareholders have a bigger claim on company’s earnings and assets. Also, they get preference over common shareholders
+                        when dividends are distributed. Generally, dividend for preference shareholders is more than that for the common
+                        shareholders. Earlier, shares were issued in physical format. However, now physical paper stock certificates have been
+                        replaced with electronic recording of stock shares, just as mutual fund shares are recorded electronically.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header d-flex align-items-center accoridon">
+                <h6> #4: Why do companies issue shares? </h6>
+                <div class="mr-auto"></div>
+                <i class="fa fa-caret-down mr-3"></i>
+            </div>
+            <div class="panel">
+                <div class="card-body border">
+                    <p>
+                        Companies issue shares to meet their financial requirements for expansion of business and other purposes. By issuing the
+                        shares company gets funds from public and other financial institutions. In return of investment, shareholder gets
+                        ownership of the company in the form of share.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header d-flex align-items-center accoridon">
+                <h6> #5: Why do people buy shares?</h6>
+                <div class="mr-auto"></div>
+                <i class="fa fa-caret-down mr-3"></i>
+            </div>
+            <div class="panel">
+                <div class="card-body border">
+                    <p>
+                        People buy shares because they are looking for better returns on their investments as compared to traditional products
+                        like bank FDs, PPF etc. They believe in growth prospect of a company in which they invest.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header d-flex align-items-center accoridon">
+                <h6> #6: How many ways we can trade in the market? </h6>
+                <div class="mr-auto"></div>
+                <i class="fa fa-caret-down mr-3"></i>
+            </div>
+            <div class="panel">
+                <div class="card-body border">
+                    <p>
+                        You can trade in following ways in the market:
+                        <br> <br>
+                        Intraday trading: In intraday trading, the position must be squared-off on the same day on which it’s created.
+                        <br> <br>
+                        Positional Trading/Investing: In positional trading/investment, the trader/investor carry the trade overnight. He can
+                        hold the trade/investment for a couple of days or stay invested for long period.
+                        <br> <br>
+                        At Capital via market pro segment we have only two product for positional trading. BTST and BTST STBT
+                        <br> <br>
+                        BTST/ BTST STBT: BTST stands for Buy Today Sell Tomorrow, this means that an individual can buy a share today and sell
+                        it tomorrow when its price moves up. STBT stands for Sell Today Buy Tomorrow (STBT) individual can earn a profit by
+                        selling the share today and purchasing the same tomorrow when prices moves down. STBT is possible in future segment
+                        only.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header d-flex align-items-center accoridon">
+                <h6> #7:What are the main phases of Portfolio management? </h6>
+                <div class="mr-auto"></div>
+                <i class="fa fa-caret-down mr-3"></i>
+            </div>
+            <div class="panel">
+                <div class="card-body border">
+                    <p>
+                        Management of various financial assets for any individual or corporate is called portfolio management. Following seven
+                        phases are there in portfolio management:
+                        <ul class="ml-4">
+                           <li>Market risk</li>
+                           <li>Purchasing power risk</li>
+                           <li>Interest rate risk</li>
+                           <li>Business risk</li>
+                           <li>Financial risk</li>
+                           <li>Liquidity risk</li>
+                           <li>Default risk</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header d-flex align-items-center accoridon">
+                <h6> #8:What are the types of Risks? </h6>
+                <div class="mr-auto"></div>
+                <i class="fa fa-caret-down mr-3"></i>
+            </div>
+            <div class="panel">
+                <div class="card-body border">
+                    <p>
+                    Generally, there are two types of risk: Systematic risk and Unsystematic risk
+                    <br> <br>
+                    Systematic risks are uncontrollable risk. It creates impact on the overall market and not just a stock or industry.
+                    Below mentioned are the major types of systematic risks:
+                        <ul class="ml-4">
+                            <li>Specification of Investment Objectives and Constraints</li>
+                            <li>Choice of Asset Mix</li>
+                            <li>Formulation of Portfolio Strategy</li>
+                            <li>Selection of Securities</li>
+                            <li>Portfolio Execution</li>
+                            <li>Portfolio Revision</li>
+                            <li>Portfolio Evaluation</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

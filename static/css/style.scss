@@ -480,6 +480,209 @@ table{
     }
 }
 
+/* Pricing Page */
+.pricing-wrapper{
+
+    h2{
+        font-size: 3rem;
+        font-family: var(--heading);
+        color: var(--primaryColor);
+        font-weight: 600;
+    }
+
+    a{
+        margin: 0.5rem 0;
+        border-radius: 3px;
+        padding: 0.8rem 2.5rem;
+        border: 1px solid var(--primaryColor);
+        color: var(--primaryColor);
+
+        &:hover{
+            border: 1px solid var(--primaryColor);
+        }
+    }
+    
+    .pricing-inner{
+        padding: 5rem 0;
+    }
+
+    .price-card{
+        opacity: 0.7;
+        width: 25%;
+        border-radius: 15px;
+        box-shadow: 0px 0px 35px #ccc;
+        
+        .card-header{
+            font-family: var(--heading);
+            font-weight: 600;
+            background: var(--secondaryColor);
+            padding: 2rem;
+            color: var(--primaryColor);
+            font-size: 1.8rem;
+            border-radius: 15px;
+            transform: scale(1.1);
+        }
+
+        .card-body{
+            box-shadow: 0 0 25px #ccc;
+            padding: 2rem;
+
+            p{
+                font-family: var(--heading);
+                opacity: 0.8;
+                font-size: 1rem;
+                color: #818078;
+                font-weight: 600;
+            }
+
+            h5{
+                margin: 2rem 0;
+                font-size: 2.5rem;
+                font-weight: 600;
+                font-family: var(--heading);
+                color: var(--primaryColor);
+
+                span{
+                    font-size: 1rem;
+                }
+            }
+
+            ul{
+                list-style: none;
+
+                li{
+                    margin: 0.5rem 0;
+                    font-size: 0.9rem;
+                    color: var(--primaryColor);
+
+                    i{
+                        padding: 0 0.5rem;
+                        color: green;
+                    }
+                }
+
+                .disabled{
+                    color: #818078;
+                    opacity: 0.8;
+
+                    i{
+                        color: #818078;
+                        opacity: 0.8;
+                    }
+                }
+            }
+            
+        }
+
+        &:nth-child(2){
+            opacity: 1;
+            z-index: 1;
+            transform: scale(1.1);
+        }
+    }
+}
+
+/* Terms And Conditions */
+.terms-wrapper{
+    
+    h2{
+        font-size: 2.5rem;
+        font-family: var(--heading);
+        color: var(--primaryColor);
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .terms-inner{
+        padding: 2rem 0;
+
+        ol{
+            line-height: 200%;
+            li{
+                color: var(--primaryColor);
+
+                ol{
+                    margin-left: 2rem;
+                }
+            }
+        }
+    }
+
+    .faq{
+        .card{
+            margin: 0.5rem 0;
+
+            .card-header{
+                cursor: pointer;
+                background: var(--primaryColor);
+                color: #fefefe;
+                border: 1px solid transparent;
+            }
+
+            .card-body{
+                background: #F1F5F9;
+                color: var(--primaryColor);
+            }
+        }
+    }
+}
+
+/* Contact US */
+.contact-wrapper{
+    background: #F1F5F9;
+    padding: 1rem;
+
+    h2{
+        font-size: 2.5rem;
+        font-family: var(--heading);
+        font-weight: 600;
+        color: var(--primaryColor);
+    }
+
+    .contact-form{
+        width: 50%;
+        transform: translateX(50%);
+
+        input[type=text],input[type=password],input[type=email],
+        textarea{
+            padding: 0.5rem;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 100;
+            font-size: 0.9rem;
+            background: #fefefe;
+            color: #1a1a1a;
+            border: 1px solid var(--primaryColor);
+
+            &::placeholder{
+                color: #999;
+                font-size: 0.9rem;
+            }
+        }
+
+        select{
+            color: #999;
+            padding: 0.5rem;
+            border: 1px solid var(--primaryColor);
+        }
+
+        input,textarea,select{
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        button{
+            background: var(--primaryColor);
+            text-transform: uppercase;
+            font-family: var(--heading);
+            color: #fefefe;
+            border-radius: 4px;
+
+            &:hover{
+                background: #051320;
+            }
+        }
+    }
+}
 
 .wrapper{
     width: 100%;
