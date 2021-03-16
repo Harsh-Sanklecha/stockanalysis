@@ -44,7 +44,6 @@ def index(request):
 
     return render(request, 'accounts/index.html', context={"mylist": mylist})
 
-@unauthenticated_user
 def contact(request):
     if request.method == 'POST':
         contact_name = request.POST.get('name')
@@ -91,7 +90,6 @@ def disclosure(request):
 
     return render(request, 'accounts/disclosure.html')
 
-@unauthenticated_user
 def faq(request):
 
     return render(request, 'accounts/faq.html')
