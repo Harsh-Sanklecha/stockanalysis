@@ -441,8 +441,8 @@ def dashboard(request):
             return render(request, 'main/search.html', {'error': "This ticker is not supported"})
 
 
-    Computation()
-    DailyReport()
+    # Computation()
+    # DailyReport()
     currDate = endOfDay.objects.filter(pk='SBIN').values('currDate')[0]['currDate']
     stock_data = endOfDay.objects.all().filter(date=currDate)
     context = {
