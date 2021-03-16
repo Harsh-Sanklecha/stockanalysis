@@ -20,7 +20,7 @@ import requests
 
 entryTargets = []
 params = {
-    'access_key': 'fce4047d20b3b06c7393ed8093e0574d'
+    'access_key': '600571f9a99091aae1609b7ee922ee48'
 }
 
 
@@ -441,8 +441,8 @@ def dashboard(request):
             return render(request, 'main/search.html', {'error': "This ticker is not supported"})
 
 
-    # Computation()
-    # DailyReport()
+    Computation()
+    DailyReport()
     currDate = endOfDay.objects.filter(pk='SBIN').values('currDate')[0]['currDate']
     stock_data = endOfDay.objects.all().filter(date=currDate)
     context = {
