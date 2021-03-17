@@ -532,6 +532,226 @@ table tbody .emptyTable:first-child {
   background: #051320;
 }
 
+/* Pricing Page */
+.pricing-wrapper h2 {
+  font-size: 3rem;
+  font-family: var(--heading);
+  color: var(--primaryColor);
+  font-weight: 600;
+}
+
+.pricing-wrapper a {
+  margin: 0.5rem 0;
+  border-radius: 3px;
+  padding: 0.8rem 2.5rem;
+  border: 1px solid var(--primaryColor);
+  color: var(--primaryColor);
+}
+
+.pricing-wrapper a:hover {
+  border: 1px solid var(--primaryColor);
+}
+
+.pricing-wrapper .pricing-inner {
+  padding: 5rem 0;
+}
+
+.pricing-wrapper .price-card {
+  opacity: 0.7;
+  width: 25%;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 35px #ccc;
+          box-shadow: 0px 0px 35px #ccc;
+}
+
+.pricing-wrapper .price-card .card-header {
+  font-family: var(--heading);
+  font-weight: 600;
+  background: var(--secondaryColor);
+  padding: 2rem;
+  color: var(--primaryColor);
+  font-size: 1.8rem;
+  border-radius: 15px;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.pricing-wrapper .price-card .card-body {
+  -webkit-box-shadow: 0 0 25px #ccc;
+          box-shadow: 0 0 25px #ccc;
+  padding: 2rem;
+}
+
+.pricing-wrapper .price-card .card-body p {
+  font-family: var(--heading);
+  opacity: 0.8;
+  font-size: 1rem;
+  color: #818078;
+  font-weight: 600;
+}
+
+.pricing-wrapper .price-card .card-body h5 {
+  margin: 2rem 0;
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-family: var(--heading);
+  color: var(--primaryColor);
+}
+
+.pricing-wrapper .price-card .card-body h5 span {
+  font-size: 1rem;
+}
+
+.pricing-wrapper .price-card .card-body ul {
+  list-style: none;
+}
+
+.pricing-wrapper .price-card .card-body ul li {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: var(--primaryColor);
+}
+
+.pricing-wrapper .price-card .card-body ul li i {
+  padding: 0 0.5rem;
+  color: green;
+}
+
+.pricing-wrapper .price-card .card-body ul .disabled {
+  color: #818078;
+  opacity: 0.8;
+}
+
+.pricing-wrapper .price-card .card-body ul .disabled i {
+  color: #818078;
+  opacity: 0.8;
+}
+
+.pricing-wrapper .price-card:nth-child(2) {
+  opacity: 1;
+  z-index: 1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+/* Terms And Conditions */
+.terms-wrapper h2 {
+  font-size: 2.5rem;
+  font-family: var(--heading);
+  color: var(--primaryColor);
+  font-weight: 600;
+  text-align: center;
+}
+
+.terms-wrapper .terms-inner {
+  padding: 2rem 0;
+}
+
+.terms-wrapper .terms-inner ol {
+  line-height: 200%;
+}
+
+.terms-wrapper .terms-inner ol li {
+  color: var(--primaryColor);
+}
+
+.terms-wrapper .terms-inner ol li ol {
+  margin-left: 2rem;
+}
+
+.terms-wrapper .faq .card {
+  margin: 0.5rem 0;
+}
+
+.terms-wrapper .faq .card .card-header {
+  cursor: pointer;
+  background: var(--primaryColor);
+  color: #fefefe;
+  border: 1px solid transparent;
+}
+
+.terms-wrapper .faq .card .card-body {
+  background: #F1F5F9;
+  color: var(--primaryColor);
+}
+
+/* Contact US */
+.contact-wrapper {
+  background: #F1F5F9;
+  padding: 1rem;
+}
+
+.contact-wrapper h2 {
+  font-size: 2.5rem;
+  font-family: var(--heading);
+  font-weight: 600;
+  color: var(--primaryColor);
+}
+
+.contact-wrapper .contact-form {
+  width: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+.contact-wrapper .contact-form input[type=text], .contact-wrapper .contact-form input[type=password], .contact-wrapper .contact-form input[type=email],
+.contact-wrapper .contact-form textarea {
+  padding: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 0.9rem;
+  background: #fefefe;
+  color: #1a1a1a;
+  border: 1px solid var(--primaryColor);
+}
+
+.contact-wrapper .contact-form input[type=text]::-webkit-input-placeholder, .contact-wrapper .contact-form input[type=password]::-webkit-input-placeholder, .contact-wrapper .contact-form input[type=email]::-webkit-input-placeholder,
+.contact-wrapper .contact-form textarea::-webkit-input-placeholder {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.contact-wrapper .contact-form input[type=text]:-ms-input-placeholder, .contact-wrapper .contact-form input[type=password]:-ms-input-placeholder, .contact-wrapper .contact-form input[type=email]:-ms-input-placeholder,
+.contact-wrapper .contact-form textarea:-ms-input-placeholder {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.contact-wrapper .contact-form input[type=text]::-ms-input-placeholder, .contact-wrapper .contact-form input[type=password]::-ms-input-placeholder, .contact-wrapper .contact-form input[type=email]::-ms-input-placeholder,
+.contact-wrapper .contact-form textarea::-ms-input-placeholder {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.contact-wrapper .contact-form input[type=text]::placeholder, .contact-wrapper .contact-form input[type=password]::placeholder, .contact-wrapper .contact-form input[type=email]::placeholder,
+.contact-wrapper .contact-form textarea::placeholder {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.contact-wrapper .contact-form select {
+  color: #999;
+  padding: 0.5rem;
+  border: 1px solid var(--primaryColor);
+}
+
+.contact-wrapper .contact-form input, .contact-wrapper .contact-form textarea, .contact-wrapper .contact-form select {
+  border-radius: 5px;
+  width: 100%;
+}
+
+.contact-wrapper .contact-form button {
+  background: var(--primaryColor);
+  text-transform: uppercase;
+  font-family: var(--heading);
+  color: #fefefe;
+  border-radius: 4px;
+}
+
+.contact-wrapper .contact-form button:hover {
+  background: #051320;
+}
+
 .wrapper {
   width: 100%;
   background-color: var(--primaryColor);

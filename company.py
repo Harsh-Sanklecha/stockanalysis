@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import time
-import os
+import os, csv
 from nsepython import *
 from datetime import date
 from dateutil.relativedelta import relativedelta
@@ -101,10 +101,9 @@ def main():
         print("---------------------------------")
         print("|\tSTOCK MARKET ANALYSIS\t|")
         print("---------------------------------")
-        symbol = input("Enter the file name (Without extension): ")
         print()
         try:
-            df = pd.read_csv(symbol+'.csv')
+            df = pd.read_csv('tcs.csv')  # YAHA PE DOWNLOADED CSV FILE (DATA FILE) KA NAAM
 
             for data in df.index[::-1]:
                 openPrice.append(df['Open Price'][data])
@@ -193,7 +192,28 @@ def main():
                         pass
 
             os.system(['clear', 'cls'][os.name == 'nt'])
+            with open(df['Symbol'][0]+"_REPORT.csv", 'w', newline='') as f:
+                fieldnames = ['Symbol', 'Date', 'Call','Stop_Loss', 'Target_1', 'Target_2', 'Target_3', 'Target_4', 'Trend']
+
+                thewriter = csv.DictWriter(f, fieldnames=fieldnames)
+                thewriter.writeheader()
             for i in range(len(testList)):
+                with open(df['Symbol'][0]+"_REPORT.csv", 'a+', newline='') as f:
+                    fieldnames = ['Symbol', 'Date', 'Call',
+                                'Stop_Loss', 'Target_1', 'Target_2', 'Target_3', 'Target_4', 'Trend']
+
+                    thewriter = csv.DictWriter(f, fieldnames=fieldnames)
+                    if testList[i][0] > testList[i][5]:
+                        trend = "BUY"
+                    else:
+                        trend = "SELL"
+
+                    thewriter.writerow(
+                        {'Symbol': df['Symbol'][0], 'Date': allCall[i],
+                            'Call': round(testList[i][0],2), 'Stop_Loss': round(testList[i][5],2), 'Target_1': round(testList[i][1],2),
+                            'Target_2': round(testList[i][2],2), 'Target_3': round(testList[i][3],2), 'Target_4': round(testList[i][4],2),
+                            'Trend': trend,
+                        })
                 print("-----------------------------------------")
                 print("|\t", df['Symbol'][0], "- DATE:", allCall[i], "\t|")
                 print("-----------------------------------------")

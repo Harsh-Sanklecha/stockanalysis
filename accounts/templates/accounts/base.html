@@ -43,13 +43,13 @@
         <div class="address-bar d-flex flex-row justify-content-between">
             <div class="left">
                 <ul>
-                    <li><a href="">FAQ</a></li>
+                    <li><a href="{% url 'faq' %}">FAQ</a></li>
                 </ul>
             </div>
             <div class="right">
                 <ul>
-                    <li><a href="">Support</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="{% url 'index' %}#support">Support</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -117,16 +117,7 @@
             <a href="{% url 'dashboard' %}" class="btn">Dashboard</a>
             <a href="{% url 'profile' %}" class="btn">Profile</a>
             <a href="#" class="btn">About Us</a>
-            <!-- <a href="{% url 'reports' %}" class="btn">Reports</a> -->
-            <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Reports
-            </a>
-            
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="font-size: 0.9rem;text-transform: uppercase; transition: none;">
-                <a class="dropdown-item" href="{% url 'reports' %}">All Reports</a>
-                <a class="dropdown-item" href="#">Daily Report</a>
-            </div>
+            <a href="{% url 'reports' %}" class="btn">Reports</a>
         </div>
     </div>
     {% endif %}

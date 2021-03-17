@@ -9,6 +9,8 @@ from django.core.mail import EmailMessage
 from django.utils.encoding import force_bytes, force_text, DjangoUnicodeDecodeError
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from django.contrib.sites.shortcuts import get_current_site
+from django.core.mail import EmailMessage
+from django.template.loader import get_template
 
 from main.decorators import unauthenticated_user
 from .forms import UserRegisterForm
@@ -42,6 +44,55 @@ def index(request):
 
     return render(request, 'accounts/index.html', context={"mylist": mylist})
 
+def contact(request):
+    if request.method == 'POST':
+        contact_name = request.POST.get('name')
+        contact_email = request.POST.get('email')
+        contact_subject = request.POST.get('subject')
+        contact_content = request.POST.get('body')
+
+        template = get_template('accounts/contact_form.txt')
+        context = {
+            'contact_name': contact_name,
+            'contact_email': contact_email,
+            'contact_subject': contact_subject,
+            'contact_content': contact_content,
+        }
+
+        content = template.render(context)
+
+        email = EmailMessage(
+            contact_subject,
+            content,
+            "InvestInIt" + '',
+            ['datafeed0@gmail.com'],
+            headers={'Reply To': contact_email}
+        )
+
+        email.send()
+
+        return redirect('/')
+
+    return render(request,'accounts/contact.html')
+
+@unauthenticated_user
+def pricing(request):
+
+    return render(request,'accounts/pricing.html')
+
+@unauthenticated_user
+def terms(request):
+
+    return render(request,'accounts/terms.html')
+
+@unauthenticated_user
+def disclosure(request):
+
+    return render(request, 'accounts/disclosure.html')
+
+def faq(request):
+
+    return render(request, 'accounts/faq.html')
 
 @unauthenticated_user
 def register(request):

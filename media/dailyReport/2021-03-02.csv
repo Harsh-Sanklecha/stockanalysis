@@ -1,0 +1,3 @@
+Symbol,Date,Close_Price,Signal_Date,Call,Stop_Loss,Target_1,Target_2,Target_3,Target_4,Trend,Status
+ADANIPORTS,2021-03-03,729.85,2021-03-02,709.7,692.0,723.59,733.35,744.43,755.18,BUY,Target 3 Reached
+BHARTIARTL,2021-03-03,546.3,2021-03-02,538.24,553.57,528.76,521.1,513.43,502.52,SELL,Awaiting Targets
