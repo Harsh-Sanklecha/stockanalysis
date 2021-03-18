@@ -183,7 +183,6 @@ def Computation():
                'TATASTEEL',
                'BANDHANBANK',
                'FEDERALBANK',
-               'PNB',
                'RBLBANK'
     ]
 

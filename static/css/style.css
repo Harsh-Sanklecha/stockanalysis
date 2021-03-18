@@ -473,9 +473,9 @@ table tbody .emptyTable:first-child {
 }
 
 .hero-wrapper .hero .hero-img img {
-  -webkit-transform: translate(50%, 20%) rotateZ(-20deg);
-          transform: translate(50%, 20%) rotateZ(-20deg);
-  width: 60%;
+  -webkit-transform: translate(45%, 20%) rotateZ(-20deg);
+          transform: translate(45%, 20%) rotateZ(-20deg);
+  width: 58%;
   height: auto;
 }
 
