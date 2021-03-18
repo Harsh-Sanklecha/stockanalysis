@@ -48,7 +48,7 @@
             </div>
             <div class="right">
                 <ul>
-                    <li><a href="{% url 'index' %}#support">Support</a></li>
+                    <li><a href="{% url 'pricing' %}">Pricing</a></li>
                     <li><a href="{% url 'contact' %}">Contact</a></li>
                 </ul>
             </div>
@@ -132,11 +132,18 @@
         <div class="footer-wrapper col-lg-8">
             <div class="footer">
                 <img src="{% static 'images/footer-logo.png' %}" alt="">
-                <h5>Invest In It provides you with market data across asset classes. Ranging from Indian & other stocks, commodities,
-                cryptocurrencies and more.</h5>
-
+                <h5>Stock analytical tips at various time frames and various markets of your choice.</h5>
+                <h6 class="mb-3">
+                    <a href="{% url 'index' %}">Home</a>
+                    <a>|</a>
+                    <a href="{% url 'index' %}">Disclaimer</a>
+                    <a>|</a>
+                    <a href="{% url 'disclosure' %}">Disclosure</a>
+                    <a>|</a>
+                    <a href="{% url 'terms' %}">T&C</a>
+                </h6>
                 <h6>None of the content is financial advice.</h6>
-                <h6>© 2020 investinit.co.in</h6>
+                <h6>© 2021 <a href="{% url 'index' %}">investinit.ml</a> </h6>
             </div>
         </div>
     </div>

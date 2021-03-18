@@ -179,9 +179,16 @@ def Computation():
                'DIVISLAB',
                'SHREECEM',
                'BPCL',
-               'SBIN',
                'ICICIBANK',
                'TATASTEEL',
+               'HDFCBANK',
+               'KOTAKBANK',
+               'BANDHANBANK',
+               'AXISBANK',
+               'ICICIBANK',
+               'FEDERALBANK',
+               'PNB',
+               'RBLBANK'
     ]
 
 
@@ -316,17 +323,13 @@ def Computation():
             keyerror = "Please provide a correct ticker"
         
 
-
-        # for i in range(len(testList[-1])):
-        #     testList[-1][i] = round(testList[-1][i],2)
-
         testList[-1].append(symbol)
-        last_closedPrice = round(last_closedPrice,2)
+        last_closedPrice = round(last_closedPrice,1)
 
         # Adjusting the difference
-        diff = round(hiken_closedPrice - testList[-1][0], 2)
+        diff = round(hiken_closedPrice - testList[-1][0], 1)
         for i in range(6):
-            testList[-1][i] = round(testList[-1][i] + diff, 2)
+            testList[-1][i] = round(testList[-1][i] + diff, 1)
 
 
         call = testList[-1][0]

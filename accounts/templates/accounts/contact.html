@@ -19,7 +19,7 @@
             </div>
             <div class="form-group">
                 <select class="browser-default custom-select" name="subject" required>
-                    <option selected>Select your query</option>
+                    <option selected>Query Type</option>
                     <option value="Payment related">Payment related</option>
                     <option value="Subscription related">Subscription related</option>
                     <option value="Analysis related">Analysis related</option>
@@ -27,7 +27,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <textarea placeholder="Message *" name="body" rows="3" required></textarea>
+                <textarea placeholder="Message *" name="body" rows="4" required></textarea>
             </div>
             <button type="submit" class="btn px-4">send</button>
         </form>
@@ -40,7 +40,12 @@
                 <p>Track 24/7 all your favourite financial assets, find support and resistance levels on stocks and get all
                     the latest
                     insights into the Indian stock market.</p>
-                <a href="#" class="btn">Contact Us</a>
+                <div class="social-icons">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-twitter-square"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin"></i>
+                </div>
             </div>
         </div>
         <img src="{% static 'images/contact.png' %}" class="col-sm-4" alt="">

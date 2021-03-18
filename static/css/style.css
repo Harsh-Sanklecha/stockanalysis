@@ -353,16 +353,17 @@ table tbody .emptyTable:first-child {
 }
 
 .hero-wrapper .hero .hero-img img {
-  -webkit-transform: translate(60%, 20%) rotateZ(-20deg);
-          transform: translate(60%, 20%) rotateZ(-20deg);
-  width: 55%;
+  -webkit-transform: translate(50%, 20%) rotateZ(-20deg);
+          transform: translate(50%, 20%) rotateZ(-20deg);
+  width: 60%;
   height: auto;
 }
 
 .hero-wrapper .hero .hero-content {
-  -webkit-transform: translate(0, 45%);
-          transform: translate(0, 45%);
   position: relative;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
 
 .hero-wrapper .hero .hero-content h2 {
@@ -371,6 +372,10 @@ table tbody .emptyTable:first-child {
   text-transform: uppercase;
   font-size: 3rem;
   letter-spacing: 0.1rem;
+}
+
+.hero-wrapper .hero .hero-content h5 {
+  color: #fefefe;
 }
 
 .hero-wrapper .hero .hero-content a {
@@ -532,6 +537,12 @@ table tbody .emptyTable:first-child {
   background: #051320;
 }
 
+.support-wrapper .support-inner .social-icons i {
+  padding: 0 0.25rem;
+  font-size: 1.5rem;
+  color: #818078;
+}
+
 /* Pricing Page */
 .pricing-wrapper h2 {
   font-size: 3rem;
@@ -647,16 +658,26 @@ table tbody .emptyTable:first-child {
   padding: 2rem 0;
 }
 
+.terms-wrapper .terms-inner p {
+  color: var(--primaryColor);
+}
+
 .terms-wrapper .terms-inner ol {
   line-height: 200%;
 }
 
 .terms-wrapper .terms-inner ol li {
+  text-align: justify;
+  text-justify: auto;
   color: var(--primaryColor);
 }
 
 .terms-wrapper .terms-inner ol li ol {
   margin-left: 2rem;
+}
+
+.terms-wrapper .blue {
+  background: #F1F5F9;
 }
 
 .terms-wrapper .faq .card {
@@ -1163,6 +1184,12 @@ table tbody .emptyTable:first-child {
   line-height: 2rem;
 }
 
+.footer-wrapper .footer h6 a {
+  padding: 0 0.5rem;
+  font-family: var(--heading);
+  color: #A9A9A9;
+}
+
 @media only screen and (max-width: 990px) {
   .navbar {
     padding: 1.15rem;
@@ -1199,8 +1226,6 @@ table tbody .emptyTable:first-child {
   .hero-wrapper .hero .hero-content {
     text-align: center;
     padding: 4rem 0;
-    -webkit-transform: none;
-            transform: none;
   }
   .hero-wrapper .hero .hero-content h2 {
     font-size: 2.5rem;
