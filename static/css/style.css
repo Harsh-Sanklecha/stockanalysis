@@ -34,7 +34,7 @@ html {
 .loader-wrapper {
   width: 100%;
   min-height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: var(--primaryColor);
@@ -468,6 +468,7 @@ table tbody .emptyTable:first-child {
 }
 
 .hero-wrapper .hero .hero-img {
+  min-height: 25rem;
   overflow: hidden;
 }
 
@@ -1305,7 +1306,6 @@ table tbody .emptyTable:first-child {
 
 .footer-wrapper-top .footer h6 ul {
   list-style: none;
-  white-space: nowrap;
 }
 
 .footer-wrapper-top .footer h6 ul li {
@@ -1376,6 +1376,24 @@ table tbody .emptyTable:first-child {
   }
   .support-wrapper .support-inner {
     position: static;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .pricing-wrapper .pricing-inner {
+    padding: 2rem 5rem;
+  }
+  .pricing-wrapper .price-card {
+    margin: 2rem 0;
+    opacity: 1;
+    width: auto;
+  }
+  .pricing-wrapper .price-card .card-header {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .pricing-wrapper .price-card:nth-child(2) {
+    opacity: 1;
+    z-index: 1;
     -webkit-transform: none;
             transform: none;
   }
@@ -1477,7 +1495,7 @@ table tbody .emptyTable:first-child {
     width: 200%;
   }
   .hero-wrapper .hero .hero-content {
-    padding: 8rem 2rem;
+    padding: 6rem 1.5rem;
   }
   .pie-graph-wrapper .pie-graph img {
     width: 25rem;
@@ -1491,6 +1509,9 @@ table tbody .emptyTable:first-child {
   }
   .support-wrapper {
     padding: 3rem 1rem;
+  }
+  .pricing-wrapper .pricing-inner {
+    padding: 1rem;
   }
   .wrapper .row .login-right .login-right-wrapper {
     width: 100%;
@@ -1534,7 +1555,7 @@ table tbody .emptyTable:first-child {
   }
 }
 
-@media only screen and (max-width: 451px) {
+@media only screen and (max-width: 461px) {
   .nav-bottom a:nth-child(2), .nav-bottom a:nth-child(3) {
     border-right: none;
   }
@@ -1554,8 +1575,12 @@ table tbody .emptyTable:first-child {
   .profile-wrapper .profile fieldset {
     padding: 1.5rem;
   }
-  .footer h6 ul li {
-    display: list-item;
+  .footer-wrapper-top .footer h6 ul li {
+    padding: 0.5rem 0;
+    display: block;
+  }
+  .footer-wrapper-top .footer h6 ul li:nth-child(even) {
+    display: none;
   }
 }
 

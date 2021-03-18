@@ -181,11 +181,7 @@ def Computation():
                'BPCL',
                'ICICIBANK',
                'TATASTEEL',
-               'HDFCBANK',
-               'KOTAKBANK',
                'BANDHANBANK',
-               'AXISBANK',
-               'ICICIBANK',
                'FEDERALBANK',
                'PNB',
                'RBLBANK'

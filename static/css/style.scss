@@ -11,6 +11,7 @@ html{
     scroll-behavior: smooth;
 }
 
+
 :root {
     --primaryColor: #092E4E;
     --secondaryColor: #69C1D1;
@@ -32,7 +33,7 @@ html{
 .loader-wrapper {
   width: 100%;
   min-height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: var(--primaryColor);
@@ -343,6 +344,7 @@ table{
         overflow: hidden;
 
         .hero-img{  
+            min-height: 25rem;
             overflow: hidden;
             
             img{
@@ -1135,8 +1137,7 @@ table{
         h6 {
             ul{
                 list-style: none;
-                white-space: nowrap;
-
+                
                 li{
                     display: inline;
                 }
@@ -1222,6 +1223,26 @@ table{
     .support-wrapper .support-inner{
         position: static;
         transform: none;
+    }
+
+    .pricing-wrapper .pricing-inner{
+        padding: 2rem 5rem;
+    }
+
+    .pricing-wrapper .price-card {
+        margin: 2rem 0;
+        opacity: 1;
+        width: auto;
+
+         .card-header{
+             transform: none;
+         }
+
+         &:nth-child(2){
+            opacity: 1;
+            z-index: 1;
+            transform: none;
+        }
     }
 
     .login-left{
@@ -1337,7 +1358,7 @@ table{
     
     }
     .hero-wrapper .hero .hero-content {
-        padding: 8rem 2rem;
+        padding: 6rem 1.5rem;
     }
 
     .pie-graph-wrapper .pie-graph img{
@@ -1354,6 +1375,10 @@ table{
 
     .support-wrapper{
         padding: 3rem 1rem;
+    }
+
+    .pricing-wrapper .pricing-inner{
+        padding: 1rem;
     }
 
     .wrapper .row .login-right .login-right-wrapper{
@@ -1407,7 +1432,7 @@ table{
     }
 }
 
-@media only screen and (max-width: 451px){
+@media only screen and (max-width: 461px){
     .nav-bottom{
         
         a{
@@ -1442,8 +1467,13 @@ table{
         }
     }
 
-    .footer h6 ul li{
-        display: list-item;
+    .footer-wrapper-top .footer h6 ul li {
+        padding: 0.5rem 0;
+        display: block;
+
+        &:nth-child(even){
+            display: none;
+        }
     }
 }
 
