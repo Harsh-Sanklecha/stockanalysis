@@ -1,3 +1,10 @@
+/* Loader */
+
+$(window).on("load", function () {
+    $(".loader-wrapper").fadeOut("slow");
+});
+
+
 /* Data Table */
 
 $(document).ready(function () {

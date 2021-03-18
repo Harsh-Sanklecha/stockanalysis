@@ -37,6 +37,11 @@
 </head>
 
 <body>
+    <div class="loader-wrapper">
+        <span class="loader">
+            <span class="loader-inner"></span>
+        </span>
+    </div>
      
     <!-- Address Bar -->
     <div class="address-bar-wrapper p-1">
@@ -125,7 +130,7 @@
     {% endblock %}
 
      <!-- Footer -->
-    <div class="footer-wrapper row m-0">
+    <div class="footer-wrapper-top row m-0">
         <div class="footer-img col-lg-4 p-0">
             <img src="{% static 'images/bse.png' %}">
         </div>
@@ -143,7 +148,7 @@
                     <a href="{% url 'terms' %}">T&C</a>
                 </h6>
                 <h6>None of the content is financial advice.</h6>
-                <h6>© 2021 <a href="{% url 'index' %}">investinit.ml</a> </h6>
+                <h6>© 2021 <a href="{% url 'index' %}">www.investinit.ml</a> </h6>
             </div>
         </div>
     </div>
