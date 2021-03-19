@@ -13,7 +13,7 @@ class endOfDay(models.Model):
     Target4     = models.FloatField(null=True)
     high        = models.FloatField(null=True)
     low         = models.FloatField(null=True)
-    status    = models.CharField(max_length=30, null=True)
+    status      = models.CharField(max_length=30, null=True)
     report      = models.FileField(null=True)
 
     def __str__(self):

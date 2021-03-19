@@ -4,10 +4,25 @@
 {% block title %} Contact Us {% endblock %}
 {% block content %}
 
+<style>
+    .alert{
+        margin: 1rem 0 0 0;
+        width: fit-content;
+        text-transform: uppercase;  
+    }
+</style>
+
 <div class="contact-wrapper text-center py-5">
 
     <h2> Contact Us </h2>
 
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} text-center">
+        <small>{{ message }}</small>
+    </div>
+    {% endfor %}
+    {% endif %}
     <div class="contact-form py-4">
         <form method="post">
             {% csrf_token %}

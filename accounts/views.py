@@ -9,12 +9,11 @@ from django.core.mail import EmailMessage
 from django.utils.encoding import force_bytes, force_text, DjangoUnicodeDecodeError
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from django.contrib.sites.shortcuts import get_current_site
-from django.core.mail import EmailMessage
 from django.template.loader import get_template
+from .utils import account_activation_token
 
 from main.decorators import unauthenticated_user
 from .forms import UserRegisterForm
-from .utils import account_activation_token
 
 @unauthenticated_user
 def index(request):
@@ -71,7 +70,8 @@ def contact(request):
 
         email.send()
 
-        return redirect('/')
+        messages.success(request, "Thank you ! your message has been sent.")
+        return redirect('contact')
 
     return render(request,'accounts/contact.html')
 
@@ -128,7 +128,8 @@ def register(request):
             email.send(fail_silently=False)
             
 
-            messages.success(request, 'Account created successfully. Please verify your E-Mail')
+            messages.success(request, 'Account created successfully')
+            messages.success(request, 'Please verify your E-Mail')
             return redirect('login')
     else:
         form = UserRegisterForm()

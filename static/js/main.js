@@ -4,6 +4,16 @@ $(window).on("load", function () {
     $(".loader-wrapper").fadeOut("slow");
 });
 
+/* Animate on Scroll */
+
+AOS.init();
+AOS.init({
+    delay: 100,
+    duration: 900,
+    once: true,
+    anchorPlacement: 'center-center',
+
+});
 
 /* Data Table */
 
