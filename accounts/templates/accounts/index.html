@@ -6,22 +6,22 @@
 
 
 <div class="hero-wrapper">
-    <div class="bar-graph">
-        <img src="{% static 'images/Group.png' %}">
-    </div>
     <div class="hero row">
         <div class="hero-img-wrapper col-lg-5">
-            <div class="hero-img">
-                <img src="{% static 'images/dashboard.png' %}">
+            <div class="hero-img d-flex justify-content-end">
+                <img src="{% static 'images/hero.png' %}">
             </div>
         </div>
         <div class="hero-content-wrapper col-lg-6">
             <div class="hero-content">
                 <h2>Targets to accelerate your returns</h2>
-                <h5 class="mb-4">Stock analytical tips at various time frames and various markets.</h5>
+                <p class="mb-4">Stock analytical tips at various time frames and various markets.</p>
                 <a href="{% url 'register' %}" class="btn"> Register for free trial</a>
             </div>
         </div>
+    </div>
+    <div class="bar-graph">
+        <img src="{% static 'images/Group.png' %}">
     </div>
 </div>
 
