@@ -455,11 +455,10 @@ table tbody .emptyTable:first-child {
 .hero-wrapper .bar-graph {
   background: var(--primaryColor);
   width: 100%;
-  padding-top: 2rem;
 }
 
 .hero-wrapper .bar-graph img {
-  opacity: 0.5;
+  opacity: 0.3;
   width: 100%;
 }
 
