@@ -1499,6 +1499,9 @@ table tbody .emptyTable:first-child {
   .hero-wrapper .hero .hero-content {
     padding: 6rem 1.5rem 4rem 1.5rem;
   }
+  .hero-wrapper .hero .hero-content a {
+    margin-top: 5%;
+  }
   .pie-graph-wrapper .pie-graph img {
     width: 25rem;
   }
