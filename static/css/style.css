@@ -504,7 +504,7 @@ table tbody .emptyTable:first-child {
 }
 
 .hero-wrapper .hero .hero-content a {
-  margin-top: 0.5rem;
+  margin: 0.5rem 0.5rem 0 0;
   font-size: 1rem;
   border-radius: 3px;
   color: #fefefe;
@@ -514,6 +514,78 @@ table tbody .emptyTable:first-child {
 
 .hero-wrapper .hero .hero-content a:hover {
   background: #051320;
+}
+
+.hero-wrapper .hero .hero-content .row {
+  margin: 0;
+}
+
+.hero-wrapper .hero .hero-content .row .know-more {
+  background: transparent;
+  border: none;
+  color: #fefefe;
+  cursor: pointer;
+}
+
+.hero-wrapper .hero .hero-content .row span {
+  font-family: var(--para);
+  display: block;
+}
+
+.hero-wrapper .hero .hero-content .row .know-more::before, .hero-wrapper .hero .hero-content .row .know-more::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  position: absolute;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  background: #fefefe;
+}
+
+.hero-wrapper .hero .hero-content .row span::before, .hero-wrapper .hero .hero-content .row span::after {
+  content: "";
+  width: 1px;
+  height: 0;
+  position: absolute;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  background: #fff;
+}
+
+.hero-wrapper .hero .hero-content .row .know-more:hover::before, .hero-wrapper .hero .hero-content .row .know-more:hover::after {
+  width: 100%;
+}
+
+.hero-wrapper .hero .hero-content .row .know-more:hover span::before, .hero-wrapper .hero .hero-content .row .know-more:hover span::after {
+  height: 100%;
+}
+
+.hero-wrapper .hero .hero-content .row .know-more::after {
+  left: 0;
+  bottom: 0;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.hero-wrapper .hero .hero-content .row .know-more span::after {
+  right: 0;
+  top: 0;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.hero-wrapper .hero .hero-content .row .know-more::before {
+  right: 0;
+  top: 0;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.hero-wrapper .hero .hero-content .row .know-more span::before {
+  left: 0;
+  bottom: 0;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
 }
 
 /* Pie Graph */
@@ -1591,6 +1663,12 @@ table tbody .emptyTable:first-child {
   }
   .footer-wrapper-top .footer h6 ul li:nth-child(even) {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 483px) {
+  .hero-wrapper .hero .hero-content .row .know-more {
+    margin-top: 5%;
   }
 }
 

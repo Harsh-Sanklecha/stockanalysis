@@ -377,7 +377,7 @@ table{
             }
 
             a{
-                margin-top: 0.5rem;
+                margin: 0.5rem 0.5rem 0 0;
                 font-size: 1rem;
                 border-radius: 3px;
                 color: #fefefe;
@@ -387,6 +387,65 @@ table{
                 &:hover{
                     background: #051320;
                 }
+            }
+
+            .row{
+                margin: 0;
+
+                .know-more{
+                    background: transparent;
+                    border: none;
+                    color: #fefefe;
+                    cursor: pointer;
+                }
+                span{
+                    font-family: var(--para);
+                    display: block;
+                }
+                .know-more::before, .know-more::after{
+                content:"";
+                    width: 0;
+                    height: 1px;
+                    position: absolute;
+                    transition: all 0.2s linear;
+                    background: #fefefe;
+                }
+
+                span::before, span::after{
+                content:"";
+                    width:1px;
+                    height:0;
+                    position: absolute;
+                    transition: all 0.2s linear;
+                    background: #fff;
+                }
+                .know-more:hover::before, .know-more:hover::after{
+                    width: 100%;
+                }
+                .know-more:hover span::before, .know-more:hover span::after{
+                    height: 100%;
+                }
+                .know-more::after{
+                    left:0;
+                    bottom: 0;
+                    transition-duration: 0.4s;
+                }
+                .know-more span::after{
+                    right:0;
+                    top: 0;
+                    transition-duration: 0.4s;
+                }
+                .know-more::before{
+                    right: 0;
+                    top: 0;
+                    transition-duration: 0.4s;
+                }
+                .know-more span::before{
+                    left: 0;
+                    bottom: 0;
+                    transition-duration: 0.4s;
+                }
+
             }
         }
     }
@@ -1485,6 +1544,13 @@ table{
         &:nth-child(even){
             display: none;
         }
+    }
+}
+
+@media only screen and (max-width: 483px){
+
+    .hero-wrapper .hero .hero-content .row .know-more{
+        margin-top: 5%;
     }
 }
 
