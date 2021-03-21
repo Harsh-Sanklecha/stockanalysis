@@ -705,6 +705,24 @@ table{
     }
 }
 
+/* About Us */
+.about-wrapper{
+
+    h2{
+        text-align: center;
+        font-family: var(--heading);
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: var(--primaryColor);
+    }
+
+    p{
+        color: var(--primaryColor);
+        line-height: 1.85rem;
+        margin: 2rem 0;
+    }
+}
+
 /* Terms And Conditions */
 .terms-wrapper{
     
@@ -1427,7 +1445,6 @@ table{
 
         a{
             margin-top: 10%;
-            padding: 0.75rem 2rem;
         }
     }
 
@@ -1547,7 +1564,7 @@ table{
     }
 }
 
-@media only screen and (max-width: 483px){
+@media only screen and (max-width: 419px){
 
     .hero-wrapper .hero .hero-content .row .know-more{
         margin-top: 5%;

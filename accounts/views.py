@@ -64,7 +64,7 @@ def contact(request):
             contact_subject,
             content,
             "InvestInIt" + '',
-            ['datafeed0@gmail.com'],
+            ['investinit.com@gmail.com'],
             headers={'Reply To': contact_email}
         )
 
@@ -94,6 +94,10 @@ def faq(request):
 
     return render(request, 'accounts/faq.html')
 
+def about(request):
+
+    return render(request, 'accounts/about.html')
+
 @unauthenticated_user
 def register(request):
     if request.method == 'POST':
@@ -121,7 +125,7 @@ def register(request):
                 email_subject,
                 'Hi '+user.username + ',\n\nThanks for signing up with Invest In It! You must follow this link to activate your account: \n'+activate_url 
                 + '\n\nHave fun, and don''t hesitate to contact us with your feedback.\nInvest In It Team \nhttp://www.investinit.ml',
-               'datafeed0@gmail.com',
+               'investinit.com@gmail.com',
                [email_id],
             )
             

@@ -842,6 +842,21 @@ table tbody .emptyTable:first-child {
           transform: scale(1.1);
 }
 
+/* About Us */
+.about-wrapper h2 {
+  text-align: center;
+  font-family: var(--heading);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--primaryColor);
+}
+
+.about-wrapper p {
+  color: var(--primaryColor);
+  line-height: 1.85rem;
+  margin: 2rem 0;
+}
+
 /* Terms And Conditions */
 .terms-wrapper h2 {
   font-size: 2.5rem;
@@ -1577,7 +1592,6 @@ table tbody .emptyTable:first-child {
   }
   .hero-wrapper .hero .hero-content a {
     margin-top: 10%;
-    padding: 0.75rem 2rem;
   }
   .pie-graph-wrapper .pie-graph img {
     width: 25rem;
@@ -1666,7 +1680,7 @@ table tbody .emptyTable:first-child {
   }
 }
 
-@media only screen and (max-width: 483px) {
+@media only screen and (max-width: 419px) {
   .hero-wrapper .hero .hero-content .row .know-more {
     margin-top: 5%;
   }

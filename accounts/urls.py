@@ -12,6 +12,7 @@ urlpatterns = [
     path('terms/',views.terms, name='terms'),
     path('disclosure/',views.disclosure, name='disclosure'),
     path('faq/',views.faq, name='faq'),
+    path('about/',views.about, name='about'),
     path('register/',views.register, name='register'),
     path('activate/<uidb64>/<token>',emailVerification.as_view(), name='activate'),
     path('accounts/login/',views.login_view, name='login'),
