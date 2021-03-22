@@ -857,6 +857,54 @@ table tbody .emptyTable:first-child {
   margin: 2rem 0;
 }
 
+.about-wrapper .team-wrapper {
+  margin: 2rem 0;
+}
+
+.about-wrapper .team-wrapper .card-wrapper {
+  padding: 1rem;
+}
+
+.about-wrapper .team-wrapper .card-wrapper .card {
+  background: transparent !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.about-wrapper .team-wrapper .card-wrapper .card .card-body {
+  padding: 1rem 0.35rem;
+}
+
+.about-wrapper .team-wrapper .card-wrapper .card img {
+  max-width: 20rem;
+  height: 20rem;
+}
+
+.about-wrapper .team-wrapper .card-wrapper .card h5 {
+  margin: 0;
+}
+
+.about-wrapper .team-wrapper .card-wrapper .card a {
+  font-family: var(--heading);
+  color: var(--primaryColor);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.about-wrapper .team-wrapper .card-wrapper .card a i {
+  color: #818078;
+  font-size: 0.7rem;
+  -webkit-transform: translate(7px, -7px);
+          transform: translate(7px, -7px);
+}
+
+.about-wrapper .team-wrapper .card-wrapper .card p {
+  font-family: var(--heading);
+  font-size: 0.9rem;
+  margin: 0;
+  color: #818078;
+}
+
 /* Terms And Conditions */
 .terms-wrapper h2 {
   font-size: 2.5rem;

@@ -721,6 +721,51 @@ table{
         line-height: 1.85rem;
         margin: 2rem 0;
     }
+
+    .team-wrapper{
+        margin: 2rem 0;
+
+        .card-wrapper{
+            padding: 1rem;
+
+            .card{
+                background: transparent !important;
+                box-shadow: none !important;
+
+                .card-body{
+                    padding: 1rem 0.35rem;
+                }
+
+                img{
+                    max-width: 20rem;
+                    height: 20rem;
+                }
+
+                h5{
+                    margin: 0;
+                } a{
+                    font-family: var(--heading);
+                    color: var(--primaryColor);
+                    font-weight: 600;
+                    text-transform: uppercase;
+
+                    i{
+                        color: #818078;
+                        font-size: 0.7rem;
+                        transform: translate(7px,-7px);
+                    }
+                }
+
+                p{
+                    font-family: var(--heading);
+                    font-size: 0.9rem;
+                    margin: 0;
+                    // text-transform: uppercase;
+                    color: #818078;
+                }
+            }
+        }
+    }
 }
 
 /* Terms And Conditions */
