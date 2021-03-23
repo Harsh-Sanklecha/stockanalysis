@@ -80,12 +80,10 @@ def pricing(request):
 
     return render(request,'accounts/pricing.html')
 
-@unauthenticated_user
 def terms(request):
 
     return render(request,'accounts/terms.html')
 
-@unauthenticated_user
 def disclosure(request):
 
     return render(request, 'accounts/disclosure.html')
