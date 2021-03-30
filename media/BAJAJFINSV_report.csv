@@ -1,3 +1,4 @@
 Date,Close_Price,Signal_Date,Call,Stop_Loss,Target_1,Target_2,Target_3,Target_4,Status
 2021-03-16,9613.3,2021-03-12,10017.93,9950.59,10070.79,10107.92,10150.08,10190.98,Awaiting Targets
 2021-03-24,9202.05,2021-03-22,9415.7,9268.3,9531.5,9612.8,9705.1,9794.6,Stop Loss has occured,BUY
+2021-03-26,9467.45,2021-03-26,9313.6,9227.6,9381.2,9428.6,9482.4,9534.7,Awaiting Targets, 
