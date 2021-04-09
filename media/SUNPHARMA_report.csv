@@ -21,3 +21,4 @@ Date,Close_Price,Signal_Date,Call,Stop_Loss,Target_1,Target_2,Target_3,Target_4,
 2021-03-24,585.3,2021-03-22,585.4,574.4,594.0,600.1,607.0,613.7,Target 1 Reached,BUY
 2021-03-26,587.2,2021-03-26,583.3,589.3,579.6,576.6,573.5,569.3,Awaiting Targets, 
 2021-03-31,597.8,2021-03-30,594.8,591.4,597.4,599.2,601.4,603.4,Final Target Reached,BUY
+2021-04-08,614.25,2021-04-06,613.7,620.6,609.4,605.9,602.5,597.5,Target 1 Reached,SELL
