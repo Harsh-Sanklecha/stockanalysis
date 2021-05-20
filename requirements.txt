@@ -35,7 +35,6 @@ Pint==0.16.1
 plac==0.9.6
 pluggy==0.13.1
 preshed==2.0.1
-psycopg2==2.8.6
 py==1.9.0
 pyalgotrading==2020.8.7
 pyinstaller==4.0
