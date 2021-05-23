@@ -17,8 +17,8 @@
                 <h2  data-aos="fade-left" data-aos-delay="900">Targets to accelerate your returns</h2>
                 <p class="mb-4" data-aos="fade-left" data-aos-delay="900" data-aos-offset="-100">Stock analytical tips based on a price action strategy.</p>
                 <div class="row d-md-flex">
-                    <a href="{% url 'dashboard' %}" class="btn" data-aos="flip-down" data-aos-delay="1400" data-aos-offset="-200"> Get Started</a>
-                    <a href="{% url 'about' %}" class="btn know-more" data-aos="flip-down" data-aos-delay="1700" data-aos-offset="-200"><span>Know More</span></a>
+                    <a href="{% url 'dashboard' %}" class="btn" data-aos="flip-down" data-aos-delay="1400" data-aos-offset="-200"> Get Started for Free</a>
+                    <a href="{% url 'index' %}#pigraph" class="btn know-more" data-aos="flip-down" data-aos-delay="1700" data-aos-offset="-200"><span>Know More</span></a>
                 </div>
             </div>
         </div>
@@ -29,15 +29,16 @@
 </div>
 
 <!-- Pie Graph Start  -->
-
-<div class="pie-graph-wrapper">
-    <div class="pie-graph-candle">
-        <img src="{% static 'images/analysis-candles.png' %}" alt="analysis candles">
+<section id="pigraph">
+    <div class="pie-graph-wrapper">
+        <div class="pie-graph-candle">
+            <img src="{% static 'images/analysis-candles.png' %}" alt="analysis candles">
+        </div>
+        <div class="pie-graph d-flex justify-content-center">
+            <img src="{% static 'images/pie-graph.png' %}" alt="Accuracy pie chart" data-aos="fade-up">
+        </div>
     </div>
-    <div class="pie-graph d-flex justify-content-center">
-        <img src="{% static 'images/pie-graph.png' %}" alt="Accuracy pie chart" data-aos="fade-up">
-    </div>
-</div>
+</section>
 
 <!-- Pie Graph End -->
 

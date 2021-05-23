@@ -1,3 +1,4 @@
+from main.models import endOfDay
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.views import *
@@ -93,6 +94,17 @@ def faq(request):
     return render(request, 'accounts/faq.html')
 
 def about(request):
+    if request.method == 'POST':
+
+        symbol = request.POST.get('ticker').upper()
+
+        stock_data = endOfDay.objects.all().filter(pk=symbol)
+
+        if stock_data:
+            return render(request, 'main/search.html', {'stock_data': stock_data})
+
+        else:
+            return render(request, 'main/search.html', {'error': "This ticker is not supported"})
 
     return render(request, 'accounts/about.html')
 

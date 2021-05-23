@@ -1335,6 +1335,11 @@ table{
 }
 
 @media only screen and (max-width: 990px){
+    .modal-content .modal-body h3 i{
+        &:nth-child(3){
+            transform: translate(5%,30%);
+        }
+    }
 
     .navbar{
         padding: 1.15rem;
