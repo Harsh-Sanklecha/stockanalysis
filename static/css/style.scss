@@ -1664,12 +1664,6 @@ table{
     }
 }
 
-@media only screen and (max-width: 419px){
-
-    .hero-wrapper .hero .hero-content .row .know-more{
-        margin-top: 5%;
-    }
-}
 
 @media only screen and (max-width: 378px){
 
@@ -1716,4 +1710,11 @@ table{
             }
         }
     } 
+}
+
+@media only screen and (max-width: 325px){
+
+    .hero-wrapper .hero .hero-content .row .know-more{
+        margin-top: 5%;
+    }
 }

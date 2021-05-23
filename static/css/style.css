@@ -1787,12 +1787,6 @@ table tbody .emptyTable:first-child {
   }
 }
 
-@media only screen and (max-width: 419px) {
-  .hero-wrapper .hero .hero-content .row .know-more {
-    margin-top: 5%;
-  }
-}
-
 @media only screen and (max-width: 378px) {
   .navbar a {
     padding-left: 0 !important;
@@ -1822,6 +1816,12 @@ table tbody .emptyTable:first-child {
   }
   .profile-wrapper .profile fieldset {
     padding: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 325px) {
+  .hero-wrapper .hero .hero-content .row .know-more {
+    margin-top: 5%;
   }
 }
 /*# sourceMappingURL=style.css.map */
