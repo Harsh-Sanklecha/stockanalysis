@@ -107,24 +107,26 @@
 </div>
 
 <!-- News Section  -->
-<div class="news-div">
-    <h4>NEWS</h4>
-    <div class="news-wrapper row" data-aos="zoom-in">
-        {% for new, des, i, author, publishedAt, url in mylist %}
-        <a href="{{url}}" target="_blank">
-            <div class="news-left-wrapper col-lg-4 p-0">
-                <div class="news">
-                    <img src="{{ i }}" alt="">
-                    <div class="news-inner">
-                        <h5>{{ new | truncatechars:60 }}</h5>
-                        <p>{{ des | truncatechars:40 }}</p>
+<section id="news">
+    <div class="news-div">
+        <h4>NEWS</h4>
+        <div class="news-wrapper row" data-aos="zoom-in">
+            {% for new, des, i, author, publishedAt, url in mylist %}
+            <a href="{{url}}" target="_blank">
+                <div class="news-left-wrapper col-lg-4 p-0">
+                    <div class="news">
+                        <img src="{{ i }}" alt="">
+                        <div class="news-inner">
+                            <h5>{{ new | truncatechars:60 }}</h5>
+                            <p>{{ des | truncatechars:40 }}</p>
+                        </div>
                     </div>
+                </a>
                 </div>
-            </a>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
-</div>
+</section>
 
 <!-- Support Section -->
 <div class="support-wrapper row" id="support">
