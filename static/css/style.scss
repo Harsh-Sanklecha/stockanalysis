@@ -780,6 +780,8 @@ table{
         margin: 2rem 0;
 
         .card-wrapper{
+            display: flex;
+            justify-content: center;
             padding: 1rem;
 
             .card{
@@ -1461,8 +1463,8 @@ table{
 
     .footer-wrapper .footer{
         padding: 2rem 1rem;
-        position: static;
-        transform: none;
+        position: relative;
+        // transform: none;
     }
 
      .footer-wrapper:before {

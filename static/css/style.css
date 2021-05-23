@@ -920,6 +920,12 @@ table tbody .emptyTable:first-child {
 }
 
 .about-wrapper .team-wrapper .card-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 1rem;
 }
 
@@ -1624,9 +1630,7 @@ table tbody .emptyTable:first-child {
   }
   .footer-wrapper .footer {
     padding: 2rem 1rem;
-    position: static;
-    -webkit-transform: none;
-            transform: none;
+    position: relative;
   }
   .footer-wrapper:before {
     content: ' ';
