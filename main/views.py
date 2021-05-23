@@ -434,7 +434,7 @@ def Computation():
 
 
 
-@login_required(login_url='login')
+# @login_required(login_url='login')
 def dashboard(request):
 
     if request.method == 'POST':
@@ -461,7 +461,7 @@ def dashboard(request):
     return render(request, 'main/dashboard.html', context)
 
 
-@login_required(login_url='login')
+# @login_required(login_url='login')
 def search(request):
 
     if request.method == 'POST':
@@ -533,7 +533,7 @@ def search(request):
     return render(request, 'main/search.html',context)
 
 
-@login_required(login_url='login')
+# @login_required(login_url='login')
 def reports(request):
     today = date.today()
     yesterday = today - timedelta(days=2)
