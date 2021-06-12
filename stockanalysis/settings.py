@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'r=v#k*q9gxia-$1v0aw(t4l&40jfbs^ew*bhhs-^@9&l-bg^#u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['www.investinit.ml','harsh-stock-analysis.herokuapp.com','127.0.0.1']
 
