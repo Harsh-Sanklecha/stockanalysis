@@ -27,7 +27,7 @@ SECRET_KEY = 'r=v#k*q9gxia-$1v0aw(t4l&40jfbs^ew*bhhs-^@9&l-bg^#u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.investinit.ml','harsh-stock-analysis.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['www.investinit.tk', 'harsh-stock-analysis.herokuapp.com', 'investinit.herokuapp.com','127.0.0.1']
 
 
 # Application definition
