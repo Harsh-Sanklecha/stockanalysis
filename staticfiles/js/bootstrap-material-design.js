@@ -6534,4 +6534,3 @@ var BootstrapMaterialDesign = function ($$$1) {
 // Bootstrap components
 
 })));
-//# sourceMappingURL=bootstrap-material-design.js.map
