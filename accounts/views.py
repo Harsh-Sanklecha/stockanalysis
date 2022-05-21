@@ -7,7 +7,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from newsapi.newsapi_client import NewsApiClient
 from django.core.mail import EmailMessage
-from django.utils.encoding import force_bytes, force_text, DjangoUnicodeDecodeError
+from django.utils.encoding import force_bytes, force_str, DjangoUnicodeDecodeError
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from django.contrib.sites.shortcuts import get_current_site
 from django.template.loader import get_template
@@ -152,7 +152,7 @@ def register(request):
 class emailVerification(View):
     def get(self, request, uidb64, token):
         try:
-            id = force_text(urlsafe_base64_decode(uidb64))
+            id = force_str(urlsafe_base64_decode(uidb64))
             user = User.objects.get(pk=id)
 
             if not account_activation_token.check_token(user, token):

@@ -20,7 +20,7 @@ import requests
 
 entryTargets = []
 params = {
-    'access_key': 'fce4047d20b3b06c7393ed8093e0574d'
+    'access_key': '6dd3a98e6b0b3d7ed9b2de805db59511'
 }
 
 
@@ -158,8 +158,8 @@ def Computation():
                'GAIL',
                'HDFCLIFE',
                'UPL',
-               'HEROMOTOCO',
-               'BAJAJ_AUTO',
+            #    'HEROMOTOCO',
+            #    'BAJAJ_AUTO',
                'RELIANCE',
                'NESTLEIND',
                'ADANIPORTS',
@@ -204,6 +204,7 @@ def Computation():
         trend = " "
         
 
+
         try:
             api_result = requests.get(
                 'http://api.marketstack.com/v1/tickers/'+symbol+'.XNSE/eod', params)
@@ -216,9 +217,11 @@ def Computation():
                 lowPrice.append(stock_data['low'])
                 closePrice.append(stock_data['close'])
                 dates.append(stock_data['date'])
+
+            if(api_response):
                 
-            curr_date = api_response['data']['eod'][0]['date']
-            today_closePrice = api_response['data']['eod'][0]['close']
+                curr_date = api_response['data']['eod'][0]['date']
+                today_closePrice = api_response['data']['eod'][0]['close']
 
             try:
                 candle = HEIKIN(openPrice[n], highPrice[n],
